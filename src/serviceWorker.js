@@ -133,3 +133,5 @@ export function unregister() {
     });
   }
 }
+
+console.log("just make sure of something")
