@@ -1,10 +1,13 @@
 import {TEST_ACTION} from '../actions';
-const InitialState={welcome: "Home", h1: "we're BAck so fknstrong "};
+import {Rainbow} from '../../assets/multiCss';
+const InitialState={welcome: "Home", h1: "We're Back"};
 const mainReducer = (state=InitialState, action) => {
   switch (action.type) {
     case TEST_ACTION:
-      console.log("actions is tested ")
-      alert("the actions is working just fine ! ! ")
+
+      //console.log('%c Action performed  ', 'background: #222; color: #bada55');
+
+      console.log("%c Action performed ", Rainbow );
       return state
     default:
       return state
