@@ -7,7 +7,7 @@ export const theme = createMuiTheme({
 
       type: 'light',
     primary: {
-        main:'#456C20' // customise your main color here
+        main:'#008080' // customise your main color here
     },
     secondary: {main:'#673ab7' },
      error: {main:'#ca0909' },
