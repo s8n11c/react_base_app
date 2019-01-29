@@ -1,5 +1,8 @@
 import {TEST_ACTION} from '../actions';
-const InitialState={welcome: "Home", h1: "we're BAck so fknstrong "};
+
+const InitialState={todoList: [{i: 1,context: "cont 1", at: "01:00"},
+{i: 2,context: "cont 2", at: "01:30"}]};
+
 const mainReducer = (state=InitialState, action) => {
   switch (action.type) {
     case TEST_ACTION:

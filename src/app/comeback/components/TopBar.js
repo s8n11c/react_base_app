@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 //import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 //import Switch from '@material-ui/core/Switch';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -50,15 +49,12 @@ class TopBar extends React.Component {
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-    const menuIcon = {
-      position : "absolute",
-      marginLeft : '1000 px',
-      border : '5 px solid pink'
-    }
-    const link= {textDecoration: 'none'}
+
     return(
-  <AppBar>
+  <AppBar position='fixed'>
       <Toolbar style={{display: "flex" , flexDirection: "row-reverse"}}>
+
+
                     <div>
                       <IconButton
                   //      style={this.menuIcon}
@@ -89,7 +85,6 @@ class TopBar extends React.Component {
 
                       </Menu>
                     </div>
-
                 </Toolbar>
               </AppBar>
 )}

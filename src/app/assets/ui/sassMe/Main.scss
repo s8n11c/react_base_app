@@ -1,14 +1,23 @@
-$primaryColor: #ccc ;
+$primaryColor: #9ce6a8 ;
 
 body {
 }
+
+.todo_controllers{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+}
+
+
 .container{
     display: flex;
-    flex-direction: row;
-    background: $primaryColor ;
+    flex-direction: column;
 
    h1{
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-      background-color: #c232 ;
+      text-align: center;
      }
+
+
 }
