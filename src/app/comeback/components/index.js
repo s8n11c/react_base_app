@@ -6,6 +6,7 @@ import {
 import TodoList from '../../todoList/components';
 import TopBar from './TopBar';
 import sassPlayground from '../../sassPlayground/components';
+import CountDown from '../../countdown/containers';
 
 import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
@@ -20,15 +21,15 @@ const styles = theme => ({
 class ComeBack extends React.Component {
 
   render() {
-
     return(
     <Router>
    <div>
         <TopBar position='fixed' />
         <div  className={this.props.classes.toolbar} />
         <div>
-          <Route style={{width: '100%',height: '100%', backgroundColor: "green"}} path="/list" exact component={TodoList} />
-          <Route style={{width: '100%',height: '100%', backgroundColor: "yellow"}} path="/sasspg" exact component={sassPlayground} />
+          <Route  path="/list" exact component={TodoList} />
+          <Route  path="/sasspg" exact component={sassPlayground} />
+          <Route  path="/countdown" exact component={CountDown} />
         </div>
   </div>
 </Router>);
