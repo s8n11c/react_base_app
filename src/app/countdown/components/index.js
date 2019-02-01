@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/ui/sassMe/Main.scss';
+import '../../assets/ui/sassMe/CountDown.scss';
 class CountDown extends React.Component {
 
   constructor() {
@@ -14,7 +14,8 @@ class CountDown extends React.Component {
       const  oneDay = 24*60*60*1000;
       let currentDate=new Date();
       let untilDate=new Date(Date.UTC(this.until.years,this.until.month-1,this.until.day,this.until.hours,this.until.min,this.until.seconds));
-      let durationDate=Math.round(Math.abs((currentDate.getTime() - untilDate.getTime())/(oneDay)))
+      let durationDate=Math.floor(Math.abs((currentDate.getTime() - untilDate.getTime())/(oneDay)))
+
       let months=Math.floor(durationDate/30)
       let years=Math.floor(durationDate/365)
       this.setState({years: years ,
@@ -26,8 +27,9 @@ class CountDown extends React.Component {
    }
 
   render() {
-    return <div className='container'>
+    return <div className='container' >
               <h1>|| Count Down ||</h1>
+
 
               <h6> {this.state.years}/{this.state.month}/{this.state.day}   --- {this.state.hours}:{this.state.min}:{this.state.seconds}</h6>
           </div>;

@@ -1,0 +1,25 @@
+$primaryColor: #9ce6a8 ;
+
+body {
+  height: 100%
+}
+
+.todo_controllers{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+}
+
+
+.container{
+  background-image: url('../../images/651258.jpg');
+  width: 100%;
+  height: auto;
+  text-align: center;
+
+   h1{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+     }
+
+
+}
