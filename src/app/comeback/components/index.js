@@ -26,11 +26,11 @@ class ComeBack extends React.Component {
    <div>
         <TopBar position='fixed' />
         <div  className={this.props.classes.toolbar} />
-        <div>
+
           <Route  path="/list" exact component={TodoList} />
           <Route  path="/sasspg" exact component={sassPlayground} />
           <Route  path="/countdown" exact component={CountDown} />
-        </div>
+        
   </div>
 </Router>);
   }
