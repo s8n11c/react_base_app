@@ -83,6 +83,8 @@ class TopBar extends React.Component {
                         <Link to="/list" style={styles.link}><MenuItem onClick={this.handleClose} >to do list</MenuItem> </Link>
                         <Link to="/sasspg" style={styles.link}><MenuItem onClick={this.handleClose}>sass play ground </MenuItem> </Link>
                         <Link to="/countdown" style={styles.link}><MenuItem onClick={this.handleClose}>Countdown </MenuItem> </Link>
+                        <Link to="/websocket" style={styles.link}><MenuItem onClick={this.handleClose}>websocket  </MenuItem> </Link>
+
                       </Menu>
                     </div>
                 </Toolbar>

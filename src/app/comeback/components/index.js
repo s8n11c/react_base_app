@@ -7,7 +7,7 @@ import TodoList from '../../todoList/components';
 import TopBar from './TopBar';
 import sassPlayground from '../../sassPlayground/components';
 import CountDown from '../../countdown/containers';
-
+import Pipe from '../../websocket/components'
 import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   // Load app bar information from the theme
@@ -30,7 +30,8 @@ class ComeBack extends React.Component {
           <Route  path="/list" exact component={TodoList} />
           <Route  path="/sasspg" exact component={sassPlayground} />
           <Route  path="/countdown" exact component={CountDown} />
-        
+          <Route  path="/websocket" exact component={Pipe} />
+
   </div>
 </Router>);
   }

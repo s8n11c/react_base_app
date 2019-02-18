@@ -16,7 +16,7 @@ class CountDown extends React.Component {
      super();
      this.state={years: "0", month: "0", day: "0", hours: "0", min: "0", seconds: "0"};
 
-     this.until={years: 2019, month: 3 , day: 1 , hours: 0, min: 0 , seconds: 0};
+     this.until={years: 2019, month: 2 , day: 28 , hours: 0, min: 0 , seconds: 0};
      this.updateStateToDate=this.updateStateToDate.bind(this);
    }
 
@@ -70,6 +70,7 @@ class CountDown extends React.Component {
                     <p className="sub-title">
                     {this.state.hours}:{this.state.min}:{this.state.seconds}
                     </p>
+
                 </div>
             </li>
           //flakes
