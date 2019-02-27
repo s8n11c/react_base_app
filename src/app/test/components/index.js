@@ -3,11 +3,8 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import TodoList from '../../todoList/components';
 import TopBar from './TopBar';
-import sassPlayground from '../../sassPlayground/components';
-import CountDown from '../../countdown/containers';
-import Pipe from '../../websocket/containers'
+
 import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   // Load app bar information from the theme
@@ -28,10 +25,13 @@ class ComeBack extends React.Component {
         <TopBar damn={this.props.onClick}  position='fixed' />
         <div  className={this.props.classes.toolbar} />
 
-          <Route  path="/list" exact component={TodoList} />
-          <Route  path="/sasspg" exact component={sassPlayground} />
-          <Route  path="/countdown" exact component={CountDown} />
-          <Route  path="/websocket" exact component={Pipe} />
+
+          <h1 style={{fontSize: "4vw", textAlign: "center"}}> React Base Project </h1>
+
+          <h1 style={{fontSize: "4vw", textAlign: "center"}}> keep it simple </h1>
+
+          <h1 style={{fontSize: "4vw", textAlign: "center"}}> Make it great </h1>
+
 
   </div>
 </Router>);
