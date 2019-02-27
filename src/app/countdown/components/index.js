@@ -21,6 +21,9 @@ class CountDown extends React.Component {
    }
 
    updateStateToDate(){
+
+     // this is bad practice --- as the all the process should be handleed inside the reducers
+
       const  oneDay = 24*60*60*1000;
       let currentDate=new Date();
       let untilDate=new Date(Date.UTC(this.until.years,this.until.month-1,this.until.day,this.until.hours,this.until.min,this.until.seconds));
@@ -73,8 +76,6 @@ class CountDown extends React.Component {
 
                 </div>
             </li>
-          //flakes
-
             <li className="layer" data-depth="0.40">
                 <div className="depth-1 flake1">
                     <img alt="flake" src="/countdown/images/flakes/depth1/flakes1.png" />

@@ -7,7 +7,7 @@ import TodoList from '../../todoList/components';
 import TopBar from './TopBar';
 import sassPlayground from '../../sassPlayground/components';
 import CountDown from '../../countdown/containers';
-import Pipe from '../../websocket/components'
+import Pipe from '../../websocket/containers'
 import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   // Load app bar information from the theme
@@ -21,10 +21,11 @@ const styles = theme => ({
 class ComeBack extends React.Component {
 
   render() {
+    console.log(this.props)
     return(
     <Router>
    <div>
-        <TopBar position='fixed' />
+        <TopBar damn={this.props.onClick}  position='fixed' />
         <div  className={this.props.classes.toolbar} />
 
           <Route  path="/list" exact component={TodoList} />

@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../assets/ui/sassMe/Main.scss';
 
 import Websocket from 'react-websocket';
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 class ComeBack extends React.Component {
 // you need to run ws script
@@ -15,9 +15,11 @@ class ComeBack extends React.Component {
 
     this.sendData=this.sendData.bind(this);
     this.state={dataReceived: "",SocketBuffer: "----",}
+
+    console.log("current props", this.props)
+
   }
   handleData(data) {
-    console.log(data)
     // let result = JSON.parse(data);
      this.setState({dataReceived: this.state.dataReceived+"--"+data});
    }
@@ -46,9 +48,24 @@ class ComeBack extends React.Component {
     onMessage={this.handleData.bind(this)}
                 debug={true}
                 ref={Websocket => {this.refWebSocket = Websocket;}} />
+
+
+                <br />
+                <br />
+                <br />
+
+                <h3> grapping data from service </h3>
+                <Button onClick={()=>this.props.custom_request_data()}>custom middleware </Button>
+                <Button onClick={()=>this.props.thunk_request_data()}>thunk</Button>
+                <Button onClick={()=>this.props.saga_request_data()}>saga</Button>
+
           </div>
 
     ;
+  }
+
+  componentDidMount(){
+
   }
 }
 

@@ -34,7 +34,6 @@ class TopBar extends React.Component {
   };
 
   handleChange = event => {
-    console.log("changed")
     this.setState({ auth: event.target.checked });
   };
 
@@ -49,13 +48,13 @@ class TopBar extends React.Component {
   render() {
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
-
     return(
   <AppBar position='fixed'>
-      <Toolbar style={{display: "flex" , flexDirection: "row-reverse"}}>
+      <Toolbar style={{display: "flex" , flexDirection: "row-reverse", justifyContent: "space-between"}}>
 
 
                     <div>
+
                       <IconButton
                   //      style={this.menuIcon}
                         aria-owns={open ? 'menu-appbar' : undefined}
@@ -87,6 +86,10 @@ class TopBar extends React.Component {
 
                       </Menu>
                     </div>
+
+                    <h3 onClick={this.props.damn}>
+                          Playground
+                    </h3>
                 </Toolbar>
               </AppBar>
 )}
